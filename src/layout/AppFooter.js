@@ -7,7 +7,7 @@ const AppFooter = () => {
     const contextPath = getConfig().publicRuntimeConfig.contextPath;
 
     return (
-        <div className="layout-footer">
+        <div className="layout-footer border-50">
             <span className="font-medium ml-2">Footer</span>
         </div>
     );

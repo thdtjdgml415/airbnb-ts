@@ -38,21 +38,23 @@ const AppTopbar = forwardRef((props, ref) => {
                         <img src={`${contextPath}/layout/images/logo-main.svg`} width="177.22px" height={'40px'} widt={'true'} alt="logo" />
                         <span className='ir'>pims</span>
                     </>
-                    <div>ddddd</div>
                 </div>
             </Link>
+            <div>인풋이 들어갈거야</div>
+
+
+            <button ref={topbarmenubuttonRef} type="button" className="p-link layout-topbar-menu-button layout-topbar-button" onClick={showProfileSidebar}>
+                <i className="pi pi-ellipsis-v" />
+            </button>
 
             <div ref={topbarmenuRef} className={classNames('layout-topbar-menu', { 'layout-topbar-menu-mobile-active': layoutState.profileSidebarVisible })}>
+                <Link href="/auth/login">
+                    <span>당신의 공간을 에어비앤비하세요</span>
+                </Link>
                 <button type="button" className="p-link layout-topbar-button">
                     <i className="pi pi-calendar"></i>
                     <span>Calendar</span>
                 </button>
-                <Link href="/auth/login">
-                    <button type="button" className="p-link layout-topbar-button">
-                        <i className="pi pi-user"></i>
-                        <span>Profile</span>
-                    </button>
-                </Link>
                 <Link href="/documentation">
                     <button type="button" className="p-link layout-topbar-button">
                         <i className="pi pi-cog"></i>
